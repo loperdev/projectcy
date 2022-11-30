@@ -1,0 +1,235 @@
+@font-face {
+  font-family: small_pixel;
+  src: url(./fonts/small_pixel.ttf);
+}
+
+@font-face {
+  font-family: Draper;
+  src: url(./fonts/Draper.otf);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Draper;
+  cursor: url("./cursor.png"), auto;
+
+}
+
+.vid-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bgvid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.inner-container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 200px);
+  overflow: hidden;
+  font-family: Draper;
+  border-radius: 30px;
+
+  /* border-radius: 30px 30px 30px 30px; */
+
+}
+
+.inner-container-2 {
+  font-family: small_pixel;
+  /* width: 800px; */
+  height: 30px;
+  position: absolute;
+  top: calc(50vh + 300px);
+  /* left: calc(50vw - 200px); */
+  overflow: hidden;
+  width: 75%;
+  margin-left: 12%;
+  justify-content: center;
+  border: 1px solid rgb(60, 60, 60);
+  box-shadow: 2px 2px 8px rgb(60, 60, 60);
+
+
+}
+
+
+
+.bgvid.inner {
+  top: calc(-50vh + 200px);
+  left: calc(-50vw + 200px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -webkit-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.box {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  font-family: Helvetica;
+  color: #fff;
+  background: rgb(55 53 53 / 70%);
+  padding: 30px 0px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 15px rgb(118, 117, 117);
+}
+
+.box h1 {
+  font-family: Draper;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 30px;
+}
+
+.box input {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: 0;
+
+}
+
+
+
+.box input:focus,
+.box input:active,
+.box button:focus,
+.box button:active {
+  outline: none;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  background: rgb(55 53 53 / 85%);
+  color: red;
+  left: 15px;
+  right: 15px;
+  z-index: 9;
+  justify-items: center;
+  padding: 25%;
+  text-align: center;
+  line-height: 2;
+  text-shadow: 2px 2px 5px red;
+
+}
+
+/* .form-popup .p {
+ text-align: center !important;
+ margin-top: 30% !important;
+} */
+/* .box button {
+  background: #2ecc71;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  width: 330px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+} */
+
+/* .box button:active {
+  background: #27ae60;
+} */
+
+.box p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.box p span {
+  cursor: pointer;
+  color: #666;
+}
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+  overflow: hidden;
+  /* HIDE SCROLL BAR */
+  background: rgb(0, 0, 0);
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove {
+  display: flex;
+  color: white;
+}
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  margin-left: 0;
+}
+
+
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200%, 0, 0);
+  }
+}
+
+.hmove {
+  animation: tickerh linear 20s infinite;
+}
+
+.hmove:hover {
+  animation-play-state:running;
+}
+
+.btn {
+  background: rgb(55 53 53 / 85%);
+  /* background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff); */
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 3px;
+  font-family: Draper;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  border: solid rgb(129, 247, 249) 2px;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.btn:hover {
+  background: #31CFCB;
+  /* background-image: -webkit-linear-gradient(top, #01c3ea, #0283ae);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db); */
+  text-decoration: none;
+  box-shadow: 0px 1px 3px #0fc7d4;
+}

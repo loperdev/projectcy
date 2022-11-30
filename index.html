@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="vid-container">
+  <video src="/BACKGROUND - DNA .mp4" muted loop autoplay>
+
+  </video>
+  <div class="inner-container">
+    <!-- <video class="bgvid inner" autoplay="autoplay" muted="muted" preload="auto" loop>
+      <source src="https://mazwai.com/videvo_files/video/free/2015-09/small_watermarked/postcard_from_big_sur_preview.webm?random=1" type="video/webm">
+    </video> -->
+    <div class="box">
+      <img src="logologin.png" alt="" style="width: 100%;">
+      <h5 style="text-align:center;font-family: Draper;">IDENTITY CARD ENTRY</h5>
+       <input type="password" placeholder="&#9679;  &#9679;  &#9679;  &#9679;  &#9679;  &#9679;  &#9679;  &#9679;"style="border:3px solid rgb(129, 247, 249) ; text-align: center;font-size: 12px;"/>
+       <button type="button" class="btn" value="Enter Code" onclick="openForm()" >Enter Code</button>
+    </div>
+  </div>
+  <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+   <p>YOU DONT HAVE ACCESS TO CORPORATION-X MAINFRAME<br />
+   ANY MORE ATEMPTS WILL RESULT IN YOUR CALY-X CITY ARREST.<br>
+   THANK YOU</P>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+  <div class="inner-container-2">
+     <div class="ticker">
+           <div class="hwrap">
+              <div class="hmove">
+              <div class="hitem"><strong style="color: #ff0078;">News:</strong> Investment partnership confirmed</div>
+              <div class="hitem"><strong style="color: #ff0078;">DNA Trials Success: </strong>500 hundread survivors out of 10,000</div>
+              <div class="hitem"><strong style="color: #ff0078;">Project</strong> : [CALY-X] A new age of investors.</div>
+
+              </div>
+            </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
